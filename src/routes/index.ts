@@ -1,5 +1,4 @@
 import { Router } from 'express';
-import { Request, Response } from 'express';
 
 import * as PageController from '../controllers/pageController';
 import * as SearchController from '../controllers/searchController';
@@ -11,7 +10,6 @@ router.get('/dogs', PageController.dogs);
 router.get('/cats', PageController.cats);
 router.get('/fishes', PageController.fishes);
 
-router.get('/', SearchController.search);
-
+router.get('/search', SearchController.search);
 
 export default router;
